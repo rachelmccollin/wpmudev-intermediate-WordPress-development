@@ -28,7 +28,7 @@ function wpmu_cta_simple() {
 	ob_start(); 
 	?>
 	
-	<div class="cta">
+	<div class="shortcode cta">
 		
 		Call us on 111-1111 or email <a href="email@email.com">email@email.com</a>
 		

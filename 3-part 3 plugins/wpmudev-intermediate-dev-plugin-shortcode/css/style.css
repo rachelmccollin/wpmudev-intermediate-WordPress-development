@@ -2,7 +2,7 @@
 	Shortcode plugin - styling for cta box
 ***************************************************/
 
-.cta {
+.shortcode.cta {
 	clear: both;
 	width: 25em;
 	max-width: 50%;
