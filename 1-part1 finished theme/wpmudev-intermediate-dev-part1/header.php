@@ -32,5 +32,8 @@
 
 
 <nav class="main">
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+	<?php wp_nav_menu( array(
+		'theme_location' => 'header-menu',
+		'container_class' => 'menu'
+	) ); ?>
 </nav>
