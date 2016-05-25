@@ -91,6 +91,7 @@ nav.main {
  	overflow: auto;
 	text-align: center;
 	clear: both;
+	height: 3rem;
 }
 /* sidebar widget areas*/
 .sidebar .widget {
@@ -129,6 +130,10 @@ textarea {
 	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
 	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
 	padding: 2px;
+}
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 /* Text elements */
