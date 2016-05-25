@@ -1,0 +1,474 @@
+/*
+Theme Name: WPMU DEV Intermediate WordPress Development Masterclass - Demo Theme
+Theme URI: https://github.com/rachelmccollin/wpmudev-intermediate-WordPress-development
+Author: Rachel McCollin
+Author URI: http://rachelmccollin.co.uk/
+Description: Theme to accompany Part 4 of WPMU DEV course on intermediate WordPress development
+Version: 3.0
+*/
+
+/*
+Contents:
+1. Reset
+2. Layout
+3. Universal elements including fonts
+4. Colours
+5. Navigation
+6. Media queries
+*/
+
+/* ------- 1. Reset ------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------- 2. Layout ------- */
+/* Layout for small screens as this is a mobile first stylesheet*/
+
+/* overall layout */
+header, .container, nav.main .menu, sidebar {
+	width: 95%;
+	clear: both;
+}
+header, .container, sidebar {
+	margin: 10px auto;
+}
+
+/* header layout */
+.site-name,
+.site-description {
+	margin-bottom: 10px;
+}
+
+/* navigation layout*/
+nav.main {
+ 	background: #3394bf;
+ 	overflow: none;
+	text-align: center;
+	clear: both;
+	height: 3rem;
+}
+/* sidebar widget areas*/
+.sidebar .widget {
+	padding: 10px 0;
+	border-top: 1px solid #3394bf;
+}
+/* footer widget areas*/
+footer {
+	clear: both;
+}
+footer .widget {
+	padding: 10px 0;
+	border-top: 1px solid #fff;
+}
+/* content */
+.entry-meta {
+	margin: 1em 0;
+	padding: 1em;
+}
+
+
+/* ------- 3. Universal elements ------- */
+
+/* Main global 'theme', fonts and typographic styles */
+
+body {
+	font-size: 14px;
+	line-height: 1.4em;
+	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+code {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+blockquote {
+	font-style: italic;
+	padding: 0 3em;
+}
+input[type="text"],
+textarea {
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	padding: 2px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Text elements */
+
+p {
+	margin-bottom: 1em;
+}
+ul, ol, ul ul, ol ol, ul ul ul, ol ol ol {
+	list-style-position: outside;
+	padding-left: 1.4em;
+	margin: 0 0 1.4em 0;
+}
+ol,ol ol, ol ol ol {
+	padding-left: 1.7em;
+}
+
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	position: absolute;
+	left: -9000px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+h1 {
+	font-size: 1.57rem; /*22px*/
+	margin: 0.8rem 0;
+}
+h2 {
+	font-size: 1.28rem; /*18px*/
+	margin: 0.8rem 0;
+}
+h3 {
+	font-size: 1.14rem; /*16px*/
+}
+h4 {
+	font-size: 1rem;
+	font-style: bold;
+}
+h5{
+	font-size: 1rem;
+	font-style: italic;
+}
+h6 {
+	font-size: 1rem;
+	font-style: normal;
+}
+
+/* ------- 4. Colours ------- */
+/* Global colours */
+body {
+	background: #fff;
+	color: #333;
+}
+
+/* Links (except menu) */
+
+a:link,
+a:visited {
+	color: #3394bf;
+	text-decoration; underline;
+}
+a:active,
+a:hover {
+	color: ;
+}
+.page-title a:link,
+.page-title a:visited,
+.entry-title a:link,
+.entry-title a:visited {
+	text-decoration: none;
+}
+.page-title a:active,
+.page-title a:hover,
+.entry-title a:active,
+.entry-title a:hover {
+	text-decoration: underline;
+}
+
+/* Header colours */
+.site-title a,
+.site-description {
+	color: #3394bf;
+	text-decoration: none;
+}
+
+/* Menu colours */
+nav.main a {
+	color: #fff;
+	background: #3394bf;
+}
+nav.main ul ul a,
+nav.main li:hover > a,
+nav.main ul ul :hover > a {
+	background: #d3e7ef;
+}
+nav.main li:hover > a,
+nav.main ul ul :hover > a,
+nav.main ul li.current_page_item > a,
+nav.main ul li.current-menu-ancestor > a,
+nav.main ul li.current-menu-item > a,
+nav.main ul li.current-menu-parent > a {
+	color: #3394bf;
+	background: #d3e7ef;
+}
+nav.main ul li:hover > ul {
+	display: block;
+}
+
+/* Titles and headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #3394bf;
+}
+.site-title {
+	line-height: 1.6rem;
+}
+/* content */
+.entry-meta {
+	background: #3394bf;
+	color: #fff;
+}
+.entry-meta a:link,
+.entry-meta a:visited {
+	color: #fff;
+}
+.entry-meta a:hover,
+.entry-meta a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Widgets */
+
+.widget a:link,
+.widget a:visited {
+	color: #3394bf;
+}
+.widget a:active,
+.widget a:hover {
+	color: #3394bf;
+	text-decoration: underline;
+}
+.widget ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+/* Footer */
+footer {
+	background: #3394bf;
+	color: #fff;
+}
+footer a:link,
+footer a:visited,
+footer .widget a:link,
+footer .widget a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+footer a:hover,
+footer a:active,
+footer .widget a:hover,
+footer .widget a:active {
+	color: #fff;
+	text-decoration: none;
+}
+footer h2, footer h3, footer h4 {
+	color: #fff;
+}
+
+/* ------- 5. Navigation ------- */
+nav.main {
+	margin-left: 0px;
+}
+nav.main ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	position: relative;
+}
+nav.main li {
+	position: relative;
+}
+nav.main a {
+	display: block;
+	line-height: 3rem;
+	padding: 0 20px 0 0;
+	text-decoration: none;
+}
+nav.main ul ul {
+	-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	float: left;
+	width: 180px;
+	z-index: 99999;
+	background: #fff;
+}
+nav.main ul ul li {
+	min-width: 180px;
+}
+nav.main ul ul ul {
+	left: 100%;
+	top: 0;
+}
+nav.main ul ul a {
+	line-height: 1em;
+	padding: 10px;
+	width: 160px;
+	height: auto;
+}
+
+/* ------- 6. Media queries ------- */
+/* tablets*/
+@media screen and (min-width: 600px) {
+	/* layout - header */
+	.header-left, .header-right {
+		width: 48%
+	}
+	.header-left {
+		float: left;
+	}
+	.header-right {
+		float: right;
+		text-align: right;
+	}
+	
+	/* layout - widget areas side by side */
+	footer {
+		overflow: auto;
+	}
+	.sidebar .widget,
+	footer aside {
+		float: left;
+		width: 49%;
+		margin-right: 2%;
+	}
+	.sidebar .widget:nth-child(even),
+	footer aside:nth-child(even) {
+		margin-right: 0;
+	}
+	/* navigation - float items next to each other */
+	nav.main {
+		text-align: left;
+		padding: 0 10px;
+	}
+	nav.main li {
+		float: left;
+		margin: 0;
+	}
+	nav.main li a {
+		padding: 0 20px;
+	}
+	nav.main, nav.main a {
+		background: #183c5b;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.content {
+		width: 65%;
+		float: left;
+	}
+	.sidebar {
+		width: 33%;
+		float: right;
+		clear: right;
+	}
+	.sidebar .widget {
+		width: 100%;
+		float: none;
+	}
+	.sidebar .widget:first-child {
+		border-top: none;
+	}
+		
+}
+
+/* desktops*/
+@media screen and (min-width: 1025px) {
+	header, .container, nav.main .menu, sidebar {
+		max-width: 1000px;
+	}
+	nav.main .menu {
+		margin: 0 auto;
+	}
+	footer aside {
+		float: left;
+		width: 23.5%;
+		margin-right: 2%;
+	}
+	footer aside:nth-child(even) {
+		margin-right: 2%;
+	}
+	footer aside.fourth {
+		margin-right: 0;
+	}
+}
+
