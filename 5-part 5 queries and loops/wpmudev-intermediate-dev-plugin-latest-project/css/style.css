@@ -1,0 +1,34 @@
+/***************************************************
+	Latest project plugin - styling
+***************************************************/
+
+.sidebar .projects {
+	padding: 0.5rem;
+	text-align: center;
+	background-color: #555;
+	color: #fff;
+	margin: 1em 0;
+}
+.sidebar .projects h3 {
+	color: #fff;
+	margin: 0.5rem 0;
+}
+.sidebar .projects a:link,
+.sidebar .projects a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+.sidebar .projects a:hover,
+.sidebar .projects a:active {
+	text-decoration: underline;	
+}
+.sidebar .projects .read-more {
+	width: 60%;
+	padding: 0.5rem 5%;
+	background-color: #fff;
+	margin: 10px auto;
+}
+.sidebar .projects .read-more a:link,
+.sidebar .projects .read-more a:visited {
+	color: #555;
+}
