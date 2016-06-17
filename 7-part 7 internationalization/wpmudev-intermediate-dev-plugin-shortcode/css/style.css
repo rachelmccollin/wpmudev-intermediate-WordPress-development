@@ -1,0 +1,25 @@
+/***************************************************
+	Shortcode plugin - styling for cta box
+***************************************************/
+
+.shortcode.cta {
+	clear: both;
+	width: 25em;
+	max-width: 50%;
+	margin: 10px auto;
+	padding: 15px 5%;
+	font: arial, sans-serif;
+	font-size: 1.4rem;
+	text-align: center;
+	line-height: 1.8rem;
+	background-color: #222;
+	color: #fff;
+}
+.cta a:link,
+.cta a:visited {
+	text-decoration: none;
+}
+.cta a:hover,
+.cta a:active {
+	text-decoration: underline;
+}
