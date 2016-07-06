@@ -15,8 +15,8 @@ Enqueue stylesheet
 *********************************************************************************/
 function wpmu_shortcode_enqueue_styles() {
 	
-	wp_register_style( 'cta_css', plugins_url( 'css/style.css', __FILE__ ) );
-    wp_enqueue_style( 'cta_css' );
+	wp_register_style( 'shortcode_cta_css', plugins_url( 'css/style.css', __FILE__ ) );
+    wp_enqueue_style( 'shortcode_cta_css' );
  
 }
 add_action( 'wp_enqueue_scripts', 'wpmu_shortcode_enqueue_styles' );

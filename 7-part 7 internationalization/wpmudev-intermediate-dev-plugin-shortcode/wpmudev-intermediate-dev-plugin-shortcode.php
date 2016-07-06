@@ -15,8 +15,8 @@ Enqueue stylesheet
 *********************************************************************************/
 function wpmu_shortcode_enqueue_styles() {
 	
-	wp_register_style( 'cta_css', plugins_url( 'css/style.css', __FILE__ ) );
-    wp_enqueue_style( 'cta_css' );
+	wp_register_style( 'shortcode_cta_css', plugins_url( 'css/style.css', __FILE__ ) );
+    wp_enqueue_style( 'shortcode_cta_css' );
  
 }
 add_action( 'wp_enqueue_scripts', 'wpmu_shortcode_enqueue_styles' );
@@ -47,7 +47,7 @@ function wpmu_cta_tags( $atts, $content = null ) {
 	ob_start(); 
 	?>
 		
-	<div class="cta">
+	<div class="shortcode cta">
 		
 			<?php echo $content; ?>
 		
@@ -76,7 +76,7 @@ function wpmu_cta_atts( $atts, $content = null ) {
 	?>	
 	
 
-	<div class="cta">
+	<div class="shortcode cta">
 		
 		<?php printf( __( 'Call us on %1$s or email <a href="%2$s">%2$s</a>', 'wpmu' ), $tel, $email ); ?>
 				
