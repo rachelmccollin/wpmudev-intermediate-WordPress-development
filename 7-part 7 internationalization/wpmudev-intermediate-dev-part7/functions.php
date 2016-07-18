@@ -112,7 +112,7 @@ wpmu_theme_i18n - registers text domain for i18n
 **********************************************************************************/
 function wpmu_theme_i18n() {
 	
-	load_plugin_textdomain( 'wpmu', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+	load_theme_textdomain( 'wpmu', get_template_directory() . '/languages');
 
 }
-add_action( 'plugins_loaded', 'wpmu_theme_i18n' );
+add_action( 'after_setup_theme', 'wpmu_theme_i18n' );
