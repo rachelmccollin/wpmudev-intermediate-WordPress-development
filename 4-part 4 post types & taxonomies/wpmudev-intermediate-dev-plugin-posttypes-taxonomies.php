@@ -15,16 +15,16 @@ wpmu_create_post_type - registers the post types
 *******************************************************************************************/
 function wpmu_create_post_type() {
 	$labels = array( 
-		'name' => __( 'Projects' ),
-		'singular_name' => __( 'Project' ),
-		'add_new' => __( 'New Project' ),
-		'add_new_item' => __( 'Add New Project' ),
-		'edit_item' => __( 'Edit Project' ),
-		'new_item' => __( 'New Project' ),
-		'view_item' => __( 'View Project' ),
-		'search_items' => __( 'Search Projects' ),
-		'not_found' =>  __( 'No Projects Found' ),
-		'not_found_in_trash' => __( 'No Projects found in Trash' ),
+		'name' => __( 'Projects', 'wpmu' ),
+		'singular_name' => __( 'Project', 'wpmu' ),
+		'add_new' => __( 'New Project', 'wpmu' ),
+		'add_new_item' => __( 'Add New Project', 'wpmu' ),
+		'edit_item' => __( 'Edit Project', 'wpmu' ),
+		'new_item' => __( 'New Project', 'wpmu' ),
+		'view_item' => __( 'View Project', 'wpmu' ),
+		'search_items' => __( 'Search Projects', 'wpmu' ),
+		'not_found' =>  __( 'No Projects Found', 'wpmu' ),
+		'not_found_in_trash' => __( 'No Projects found in Trash', 'wpmu' ),
 	);
 	$args = array(
 		'labels' => $labels,
@@ -52,15 +52,15 @@ wpmu_register_taxonomy - registers the taxonomies
 function wpmu_register_taxonomy() {
 
   $labels = array(
-		'name'              => __( 'Services' ),
-		'singular_name'     => __( 'Service' ),
-		'search_items'      => __( 'Search Services' ),
-		'all_items'         => __( 'All Services' ),
-		'edit_item'         => __( 'Edit Services' ),
-		'update_item'       => __( 'Update Services' ),
-		'add_new_item'      => __( 'Add New Services' ),
-		'new_item_name'     => __( 'New Service Name' ),
-		'menu_name'         => __( 'Services' ),
+		'name'              => __( 'Services', 'wpmu' ),
+		'singular_name'     => __( 'Service', 'wpmu' ),
+		'search_items'      => __( 'Search Services', 'wpmu' ),
+		'all_items'         => __( 'All Services', 'wpmu' ),
+		'edit_item'         => __( 'Edit Services', 'wpmu' ),
+		'update_item'       => __( 'Update Services', 'wpmu' ),
+		'add_new_item'      => __( 'Add New Services', 'wpmu' ),
+		'new_item_name'     => __( 'New Service Name', 'wpmu' ),
+		'menu_name'         => __( 'Services', 'wpmu' ),
 	);
 	
 	$args = array(
