@@ -68,7 +68,7 @@ function wpmu_register_taxonomy() {
 		'hierarchical' => true,
 		'sort' => true,
 		'args' => array( 'orderby' => 'term_order' ),
-		'rewrite' => array( 'slug' => 'weebles' ),
+		'rewrite' => array( 'slug' => 'services' ),
 		'show_admin_column' => true
 	);
 	
