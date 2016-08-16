@@ -6,8 +6,22 @@
 	
 		<?php $title = $wp_query->get_queried_object(); ?>
 		<h1>
-			<?php _e( 'Archive for ', 'wpmu' ); ?>
-			<?php echo $title->name; ?>
+			<?php 
+			_e( 'Archive for ', 'wpmu' );
+			// echo out correct title depending on archive type
+			if ( is_day() ) {
+				echo the_time('F jS, Y');
+			}
+			elseif ( is_month() ) {
+				echo the_time('F Y');
+			}
+			elseif ( is_year() ) {
+				echo the_time('Y');
+			}
+			else {
+				echo $title->name;
+			}
+			?>
 		</h1>
 		
 		<?php while ( have_posts()) : the_post();?> 
