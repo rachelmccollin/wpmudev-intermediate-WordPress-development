@@ -11,7 +11,7 @@
 */
 
 /*******************************************************************************************
-wpmu_get_related_posts - fetches the posts
+wpmu_get_recent_posts - fetches the posts
 *******************************************************************************************/
 function wpmu_get_recent_posts() {
 	
@@ -33,13 +33,15 @@ function wpmu_get_recent_posts() {
 			<?php // output the posts
 			foreach( $myposts as $mypost ) {
 				
+				setup_postdata( $mypost );
+				
 				$postID = $mypost->ID; ?>
 			
 				<article class="post recent <?php echo $postID; ?>">
 						
 					<h3><a href="<?php echo get_page_link( $postID ); ?>"><?php echo get_the_title( $postID ); ?></a></h3>
 					<section class="entry">
-						<?php echo get_the_excerpt( $postID ); ?>
+						<?php the_excerpt( $postID ); ?>
 						<a href="<?php echo get_page_link( $postID ); ?>">Read More</a>
 					</section>
 				</article>
